@@ -445,6 +445,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
     android.hardware.gnss@1.0-service-qti
 
+# Doze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
 # VR HAL
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-service.wahoo \
