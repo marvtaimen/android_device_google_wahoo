@@ -83,7 +83,7 @@ BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 
 TARGET_COPY_OUT_VENDOR := vendor
 
-BOARD_PREBUILT_VENDORIMAGE := true
+# BOARD_PREBUILT_VENDORIMAGE := true
 
 # Install odex files into the other system image
 BOARD_USES_SYSTEM_OTHER_ODEX := true
