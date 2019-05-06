@@ -101,9 +101,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier
 
-PRODUCT_PACKAGES += \
-    bootctrl.msm8998
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cp_system_other_odex=1
 
@@ -124,7 +121,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Enable update engine sideloading by including the static version of the
 # boot_control HAL and its dependencies.
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.msm8998 \
     libgptutils \
     libz \
     libcutils
@@ -307,10 +303,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
-
-#ipacm configuration files
-PRODUCT_COPY_FILES += \
-    hardware/qcom/data/ipacfg-mgr/msm8998/ipacm/src/IPACM_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/IPACM_cfg.xml
 
 PRODUCT_PACKAGES += \
     hwcomposer.msm8998 \
@@ -626,9 +618,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Privileged permissions whitelist
 PRODUCT_COPY_FILES += \
     device/google/wahoo/permissions/privapp-permissions-aosp_wahoo.xml:system/etc/permissions/privapp-permissions-aosp_wahoo.xml
-
-PRODUCT_PACKAGES += \
-    ipacm
 
 #Set default CDMA subscription to RUIM
 PRODUCT_PROPERTY_OVERRIDES += \
